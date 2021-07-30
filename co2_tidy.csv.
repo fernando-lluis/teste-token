@@ -1,0 +1,7 @@
+#-------------------------------------------
+co2_tidy %>% # conjunto de dados
+group_by(ano) %>% # agrupa por ano
+summarise(media = round(mean(ppm), 2)) %>% # calcula a média da variavel ppm em cada grupo
+ggplot(aes(ano, media, group = 1)) + # cria o gráfico
+geom_line(color = "blue", size = 1)
+#-------------------------------------------
